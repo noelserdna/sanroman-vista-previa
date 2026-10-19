@@ -18,7 +18,7 @@
    "step": "installTheme",
    "themeData": {
     "resource": "url",
-    "url": "https://raw.githubusercontent.com/noelserdna/sanroman-vista-previa/main/sanroman.zip"
+    "url": "https://raw.githubusercontent.com/noelserdna/sanroman-vista-previa/825571d559a6eee8d11885b3d4128d8a59ba1806/sanroman.zip"
    },
    "options": {
     "activate": true
@@ -28,7 +28,7 @@
    "step": "unzip",
    "zipFile": {
     "resource": "url",
-    "url": "https://raw.githubusercontent.com/noelserdna/sanroman-vista-previa/main/contenido.zip"
+    "url": "https://raw.githubusercontent.com/noelserdna/sanroman-vista-previa/825571d559a6eee8d11885b3d4128d8a59ba1806/contenido.zip"
    },
    "extractToPath": "/wordpress"
   },
