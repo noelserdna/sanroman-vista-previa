@@ -1,0 +1,18 @@
+{
+ "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+ "landingPage": "/",
+ "preferredVersions": { "php": "8.3", "wp": "latest" },
+ "features": { "networking": true },
+ "steps": [
+  { "step": "setSiteLanguage", "language": "es_ES" },
+  { "step": "installTheme",
+    "themeData": { "resource": "url", "url": "https://raw.githubusercontent.com/noelserdna/sanroman-vista-previa/main/sanroman.zip" },
+    "options": { "activate": true } },
+  { "step": "unzip",
+    "zipFile": { "resource": "url", "url": "https://raw.githubusercontent.com/noelserdna/sanroman-vista-previa/main/contenido.zip" },
+    "extractToPath": "/wordpress" },
+  { "step": "mkdir", "path": "/wordpress/wp-content/mu-plugins" },
+  { "step": "cp", "fromPath": "/wordpress/contenido/aviso-vista-previa.php", "toPath": "/wordpress/wp-content/mu-plugins/aviso-vista-previa.php" },
+  { "step": "runPHP", "code": "<?php require '/wordpress/contenido/crear-paginas.php';" }
+ ]
+}
